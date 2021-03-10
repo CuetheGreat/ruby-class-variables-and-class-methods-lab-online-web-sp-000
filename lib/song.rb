@@ -13,7 +13,7 @@ class Song
     @genre = genre
     @@count += 1
     
-    if @@genres.find? { |i| i == genre}
+    if @@genres.detect? { |i| i == genre}
       @@genre_count[genre] += 1
     else
       @@genres << genre
