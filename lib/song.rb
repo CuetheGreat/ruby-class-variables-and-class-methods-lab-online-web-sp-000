@@ -20,7 +20,7 @@ class Song
       @@genre_count[genre] = 0
     end
     
-    if @@artists.find? { |i| i == artist}
+    if @@artists.detect? { |i| i == artist}
       @@artist_count[genre] += 1
     else
       @@artists << artist
