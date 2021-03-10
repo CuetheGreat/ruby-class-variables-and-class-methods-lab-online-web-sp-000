@@ -13,14 +13,14 @@ class Song
     @genre = genre
     @@count += 1
     
-    if @@genres.detect? { |i| i == genre}
+    if @@genres.include?(genre)
       @@genre_count[genre] += 1
     else
       @@genres << genre
       @@genre_count[genre] = 0
     end
     
-    if @@artists.detect? { |i| i == artist}
+    if @@artists.include?(artist)
       @@artist_count[genre] += 1
     else
       @@artists << artist
