@@ -21,7 +21,7 @@ class Song
     end
     
     if @@artists.include?(artist)
-      @@artist_count[genre] += 1
+      @@artist_count[artist] += 1
     else
       @@artists << artist
       @@artist_count[artist] = 0
